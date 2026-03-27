@@ -14,8 +14,8 @@ export default function ServiceArea() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
             Serving the 285 Corridor &amp; Beyond
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
-            Based in Bailey, CO — we serve the entire 285 Corridor from West Metro Denver to Park County.
+          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
+            Based in Bailey, CO, Tri Peaks serves mountain communities and West Metro Denver with fast scheduling and clear communication.
           </p>
         </div>
 
@@ -31,6 +31,7 @@ export default function ServiceArea() {
         </div>
 
         <div className="text-center mt-10">
+          <p className="text-[#393939]/70 text-sm mb-4 font-medium">Typical response window: within 24 hours for quote requests</p>
           <a
             href="tel:7204365746"
             className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-8 py-4 rounded-full inline-block transition-all duration-200 shadow-lg hover:-translate-y-0.5"

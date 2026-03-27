@@ -30,7 +30,7 @@ export default function WhyUs() {
             Why Tri Peaks
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
-            Colorado&apos;s Trusted{" "}
+            Why Homeowners Keep Choosing{" "}
             <span className="text-[#eea603]">Electrical Experts</span>
           </h2>
         </div>
@@ -64,10 +64,10 @@ export default function WhyUs() {
           <div>
             <blockquote className="border-l-4 border-[#eea603] pl-6 mb-8">
               <p className="text-[#eea603] font-black text-2xl sm:text-3xl mb-3 leading-tight">
-                &ldquo;Powering Projects — Even in Winter&rdquo;
+                &ldquo;Powering Projects - Even in Winter&rdquo;
               </p>
               <footer className="text-white/60 text-sm">
-                — David Martinez, Owner &amp; Master Electrician
+                David Martinez, Owner &amp; Master Electrician
               </footer>
             </blockquote>
 

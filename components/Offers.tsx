@@ -85,11 +85,11 @@ export default function Offers() {
             LIMITED TIME - SAVE BIG
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3">
-            Special Offers for{" "}
-            <span className="text-[#eea603]">Our Community</span>
+            Claim Current Discounts
+            <span className="text-[#eea603]"> Before They Expire</span>
           </h2>
           <p className="text-white/60 text-lg mb-6">
-            Click any offer to claim — mention at time of service
+            Download your coupon and mention it when booking.
           </p>
           <Countdown />
         </div>
@@ -134,10 +134,19 @@ export default function Offers() {
                   ? "bg-[#082933] text-white group-hover:bg-[#082933]/90"
                   : "bg-[#eea603] text-[#082933] group-hover:bg-[#d99400]"
               }`}>
-                Claim Offer →
+                View Coupon →
               </span>
             </a>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href="tel:7204365746"
+            className="inline-flex items-center justify-center bg-[#eea603] text-[#082933] font-extrabold px-8 py-3 rounded-full hover:bg-[#d99400] transition-colors"
+          >
+            Call to Book and Apply Offer
+          </a>
         </div>
       </div>
     </section>

@@ -16,11 +16,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/assets/TriPeaksService_CircleLogo.png"
-              alt="Tri Peaks Electric Service Inc."
-              width={80}
+              src="/assets/Tri_Peaks_ServiceWordmark.png"
+              alt="Tri Peaks Electric Service"
+              width={260}
               height={80}
-              className="w-20 h-20 object-contain mb-4"
+              className="w-52 h-auto object-contain mb-4"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Licensed &amp; insured electrical contractor serving Bailey, CO

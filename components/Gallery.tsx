@@ -18,8 +18,8 @@ const photos = [
   {
     src: "/assets/ChatGPT_Image.png",
     alt: "Residential panel upgrade — licensed electrician Colorado",
-    title: "Residential Panel Upgrade",
-    location: "Conifer, CO",
+    title: "Year-Round Electrical Service",
+    location: "285 Corridor, CO",
     tag: "Residential",
   },
 ];
@@ -30,13 +30,13 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            Our Portfolio
+            Project Results
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Featured Projects
+            Real Work. Real Outcomes.
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
-            See the quality electrical work we&apos;ve completed across the 285 Corridor.
+          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
+            Explore recent projects completed for homeowners and businesses across Bailey, Conifer, Evergreen, and surrounding mountain communities.
           </p>
         </div>
 
@@ -68,6 +68,21 @@ export default function Gallery() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="tel:7204365746"
+            className="bg-[#082933] text-white font-bold px-8 py-3 rounded-full hover:bg-[#0a3444] transition-colors"
+          >
+            Discuss Your Project
+          </a>
+          <a
+            href="#pricing"
+            className="border-2 border-[#082933] text-[#082933] font-bold px-8 py-3 rounded-full hover:border-[#eea603] hover:text-[#eea603] transition-colors"
+          >
+            See Pricing Specials
+          </a>
         </div>
       </div>
     </section>

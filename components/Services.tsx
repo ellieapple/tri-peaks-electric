@@ -51,13 +51,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            What We Do
+            Core Services
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Our Electrical Services
+            Electrical Work Built to Last
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
-            Full-service licensed electrician for homes &amp; businesses along the 285 Corridor.
+          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
+            From diagnostics to service upgrades, Tri Peaks handles high-priority electrical projects with clear scope, clean execution, and local code compliance.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function Services() {
                 {service.description}
               </p>
               <span className="mt-4 inline-flex items-center text-[#eea603] text-sm font-bold group-hover:gap-2 gap-1 transition-all">
-                Get a Quote <span>→</span>
+                Request Estimate <span>→</span>
               </span>
             </a>
           ))}

@@ -5,9 +5,34 @@ import Offers from "@/components/Offers";
 import Specials from "@/components/Specials";
 import Gallery from "@/components/Gallery";
 import WhyUs from "@/components/WhyUs";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import ServiceArea from "@/components/ServiceArea";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+
+const faqItems = [
+  {
+    question: "How quickly can Tri Peaks respond to service calls?",
+    answer:
+      "Most requests in Bailey, Conifer, and Evergreen can be scheduled quickly, and same-day service is available for many jobs.",
+  },
+  {
+    question: "Do you handle permits and code-compliant installations?",
+    answer:
+      "Yes. Tri Peaks performs licensed, code-compliant work and handles permitting when required for your project.",
+  },
+  {
+    question: "Can you install EV chargers and panel upgrades together?",
+    answer:
+      "Absolutely. We evaluate your existing service, recommend upgrades if needed, and install a dedicated EV charging circuit.",
+  },
+  {
+    question: "Do you provide upfront pricing and free estimates?",
+    answer:
+      "Yes. You can review posted specials and request a free estimate for custom projects before scheduling work.",
+  },
+];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -75,6 +100,18 @@ const jsonLd = {
       name: "Tri Peaks Electric Service Inc.",
       publisher: { "@id": "https://tpeservice.net/#business" },
     },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tpeservice.net/#faq",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
   ],
 };
 
@@ -93,6 +130,8 @@ export default function Home() {
         <Specials />
         <Gallery />
         <WhyUs />
+        <Testimonials />
+        <FAQ />
         <ServiceArea />
         <CTA />
       </main>

@@ -32,6 +32,11 @@ const faqItems = [
     answer:
       "Yes. You can review posted specials and request a free estimate for custom projects before scheduling work.",
   },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "Tri Peaks serves Bailey, Conifer, Evergreen, Indian Hills, Pine, Morrison, Fairplay, Jefferson County, Park County, and West Metro Denver.",
+  },
 ];
 
 const jsonLd = {

@@ -26,7 +26,13 @@ h6 {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 72px; /* mobile: nav only */
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 96px; /* desktop: 8px announcement bar + 80px nav + buffer */
+  }
 }
 
 @layer utilities {

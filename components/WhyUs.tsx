@@ -31,7 +31,7 @@ export default function WhyUs() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
             Why Homeowners Keep Choosing{" "}
-            <span className="text-[#eea603]">Electrical Experts</span>
+            <span className="text-[#eea603]">Tri Peaks Electric</span>
           </h2>
         </div>
 

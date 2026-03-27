@@ -69,7 +69,7 @@ export default function Nav() {
             <div className="flex items-center gap-3">
               <a
                 href="tel:7204365746"
-                className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold px-4 py-2.5 lg:px-6 lg:py-3 rounded-full text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap animate-pulse-gold"
+                className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-bold px-4 py-2.5 lg:px-6 lg:py-3 rounded-lg text-sm transition-colors whitespace-nowrap"
               >
                 <span className="hidden sm:inline">(720) 436-5746</span>
                 <span className="sm:hidden">Call Now</span>
@@ -114,7 +114,7 @@ export default function Nav() {
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#082933] border-t border-[#eea603]/30 p-3 flex gap-2">
         <a
           href="tel:7204365746"
-          className="flex-1 bg-[#eea603] text-[#082933] font-extrabold text-center py-3 rounded-lg text-sm"
+          className="flex-1 bg-[#eea603] text-[#082933] font-bold text-center py-3 rounded-lg text-sm"
         >
           Call (720) 436-5746
         </a>

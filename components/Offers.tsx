@@ -37,19 +37,14 @@ const offers = [
 export default function Offers() {
   return (
     <section id="offers" className="py-20 sm:py-28 bg-[#082933] relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#eea603]/5 rounded-full blur-3xl" />
+
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
+        <div className="mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Current Discounts
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-3">
-            Save on Your Next
-            <span className="text-[#eea603]"> Electrical Project</span>
           </h2>
-          <p className="text-white/60 text-lg">
+          <p className="text-white/60 text-base">
             Download your coupon and mention it when booking.
           </p>
         </div>
@@ -61,20 +56,19 @@ export default function Offers() {
               href={offer.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer overflow-hidden ${
+              className={`group relative rounded-xl p-6 text-center transition-colors cursor-pointer overflow-hidden ${
                 offer.featured
                   ? "bg-gradient-to-br from-[#eea603] to-[#d99400] ring-2 ring-[#eea603] shadow-xl shadow-[#eea603]/20"
                   : "bg-white/5 border border-white/10 hover:border-[#eea603]/50"
               }`}
             >
-              {/* badge */}
-              <div className={`text-xs font-extrabold uppercase tracking-wider mb-4 ${
+              <div className={`text-xs font-bold uppercase tracking-wide mb-4 ${
                 offer.featured ? "text-[#082933]/70" : "text-[#eea603]"
               }`}>
                 {offer.badge}
               </div>
 
-              <div className={`font-black text-4xl mb-2 ${
+              <div className={`font-bold text-3xl mb-2 ${
                 offer.featured ? "text-[#082933]" : "text-white"
               }`}>
                 {offer.discount}
@@ -89,7 +83,7 @@ export default function Offers() {
               }`}>
                 {offer.subtitle}
               </p>
-              <span className={`inline-block font-extrabold text-sm px-5 py-2.5 rounded-full transition-all ${
+              <span className={`inline-block font-bold text-sm px-5 py-2.5 rounded-lg transition-colors ${
                 offer.featured
                   ? "bg-[#082933] text-white group-hover:bg-[#082933]/90"
                   : "bg-[#eea603] text-[#082933] group-hover:bg-[#d99400]"
@@ -103,7 +97,7 @@ export default function Offers() {
         <div className="mt-10 text-center">
           <a
             href="tel:7204365746"
-            className="inline-flex items-center justify-center bg-[#eea603] text-[#082933] font-extrabold px-8 py-3 rounded-full hover:bg-[#d99400] transition-colors"
+            className="inline-flex items-center justify-center bg-[#eea603] text-[#082933] font-bold px-7 py-3 rounded-lg hover:bg-[#d99400] transition-colors"
           >
             Call to Book and Apply Offer
           </a>

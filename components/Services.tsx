@@ -49,15 +49,12 @@ export default function Services() {
   return (
     <section id="services" className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            Core Services
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Electrical Work Built to Last
+        <div className="max-w-2xl mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
+            What We Do
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
-            From diagnostics to service upgrades, Tri Peaks handles high-priority electrical projects with clear scope, clean execution, and local code compliance.
+          <p className="text-[#393939]/70 text-base">
+            From diagnostics to full service upgrades — licensed, code-compliant electrical work for homes and businesses.
           </p>
         </div>
 
@@ -66,7 +63,7 @@ export default function Services() {
             <a
               key={service.title}
               href="tel:7204365746"
-              className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#eea603] rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#eea603]/10 flex flex-col"
+              className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#eea603]/60 rounded-xl p-6 transition-colors flex flex-col"
             >
               {service.image ? (
                 <div className="flex justify-center mb-4">
@@ -75,7 +72,7 @@ export default function Services() {
                     alt={service.imageAlt}
                     width={100}
                     height={100}
-                    className="h-24 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="h-24 w-auto object-contain"
                   />
                 </div>
               ) : (
@@ -89,8 +86,8 @@ export default function Services() {
               <p className="text-[#393939]/70 text-sm leading-relaxed flex-1">
                 {service.description}
               </p>
-              <span className="mt-4 inline-flex items-center text-[#eea603] text-sm font-bold group-hover:gap-2 gap-1 transition-all">
-                Request Estimate <span>→</span>
+              <span className="mt-4 inline-flex items-center text-[#eea603] text-sm font-medium">
+                Request Estimate →
               </span>
             </a>
           ))}

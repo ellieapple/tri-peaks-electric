@@ -28,15 +28,12 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            Project Results
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Real Work. Real Outcomes.
+        <div className="max-w-2xl mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
+            Recent Projects
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
-            Explore recent projects completed for homeowners and businesses across Bailey, Conifer, Evergreen, and surrounding mountain communities.
+          <p className="text-[#393939]/70 text-base">
+            A few recent jobs across Bailey, Conifer, Evergreen, and the surrounding area.
           </p>
         </div>
 
@@ -44,20 +41,20 @@ export default function Gallery() {
           {photos.map((photo) => (
             <div
               key={photo.src}
-              className="group relative rounded-2xl overflow-hidden bg-gray-100 shadow-md hover:shadow-2xl transition-all duration-500"
+              className="group relative rounded-xl overflow-hidden bg-gray-100"
             >
               <div className="aspect-[4/3] relative">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
                 {/* Tag */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-[#eea603] text-[#082933] text-xs font-extrabold px-3 py-1 rounded-full">
+                  <span className="bg-white/90 text-[#082933] text-xs font-semibold px-2.5 py-1 rounded">
                     {photo.tag}
                   </span>
                 </div>
@@ -70,18 +67,12 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-10 text-center">
           <a
             href="tel:7204365746"
-            className="bg-[#082933] text-white font-bold px-8 py-3 rounded-full hover:bg-[#0a3444] transition-colors"
+            className="text-[#082933] font-medium text-sm hover:text-[#eea603] transition-colors"
           >
-            Discuss Your Project
-          </a>
-          <a
-            href="#pricing"
-            className="border-2 border-[#082933] text-[#082933] font-bold px-8 py-3 rounded-full hover:border-[#eea603] hover:text-[#eea603] transition-colors"
-          >
-            See Pricing Specials
+            Have a project like this? Let&apos;s talk →
           </a>
         </div>
       </div>

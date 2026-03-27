@@ -7,15 +7,12 @@ export default function ServiceArea() {
   return (
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
             Service Area
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Serving the 285 Corridor &amp; Beyond
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
-            Based in Bailey, CO, Tri Peaks serves mountain communities and West Metro Denver with fast scheduling and clear communication.
+          <p className="text-[#393939]/70 text-base max-w-lg mx-auto">
+            Based in Bailey, CO. We serve mountain communities and West Metro Denver.
           </p>
         </div>
 
@@ -23,7 +20,7 @@ export default function ServiceArea() {
           {areas.map((area) => (
             <span
               key={area}
-              className="bg-white border border-gray-200 hover:border-[#eea603] text-[#082933] text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-sm hover:shadow-md"
+              className="bg-white border border-gray-200 text-[#082933] text-sm font-medium px-4 py-2 rounded-lg"
             >
               {area}
             </span>
@@ -31,12 +28,12 @@ export default function ServiceArea() {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-[#393939]/70 text-sm mb-4 font-medium">Typical response window: within 24 hours for quote requests</p>
+          <p className="text-[#393939]/60 text-sm mb-4">Most quotes returned within 24 hours</p>
           <a
             href="tel:7204365746"
-            className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-8 py-4 rounded-full inline-block transition-all duration-200 shadow-lg hover:-translate-y-0.5"
+            className="text-[#082933] font-medium text-sm hover:text-[#eea603] transition-colors"
           >
-            Call Your Local Electrician
+            Call your local electrician →
           </a>
         </div>
       </div>

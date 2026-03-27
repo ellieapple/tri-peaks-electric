@@ -37,16 +37,12 @@ export default function Specials() {
   return (
     <section id="pricing" className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            Transparent Pricing
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
+        <div className="max-w-2xl mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
             Pricing Specials
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
-            No surprises. Click any card to see our fixed pricing on the most
-            popular electrical projects.
+          <p className="text-[#393939]/70 text-base">
+            No surprises. Click any card to see fixed pricing on popular electrical projects.
           </p>
         </div>
 
@@ -57,16 +53,16 @@ export default function Specials() {
               href={special.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative bg-white rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+              className={`group relative bg-white rounded-xl p-6 transition-colors ${
                 special.popular
-                  ? "ring-2 ring-[#eea603] shadow-lg"
-                  : "border border-gray-200 hover:border-[#eea603]"
+                  ? "ring-2 ring-[#eea603]"
+                  : "border border-gray-200 hover:border-[#eea603]/60"
               }`}
             >
               {special.popular && (
                 <div className="absolute -top-3 right-4">
-                  <span className="bg-[#eea603] text-[#082933] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                    Most Popular
+                  <span className="bg-[#eea603] text-[#082933] text-[10px] font-bold px-2.5 py-0.5 rounded text-xs">
+                    Popular
                   </span>
                 </div>
               )}
@@ -82,8 +78,8 @@ export default function Specials() {
                   <p className="text-[#393939]/60 text-sm leading-relaxed mb-3">
                     {special.description}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[#eea603] text-sm font-bold group-hover:gap-2 transition-all">
-                    See Pricing <span>→</span>
+                  <span className="inline-flex items-center text-[#eea603] text-sm font-medium">
+                    See Pricing →
                   </span>
                 </div>
               </div>
@@ -91,18 +87,18 @@ export default function Specials() {
           ))}
         </div>
 
-        <div className="mt-14 text-center bg-[#082933] rounded-3xl py-10 px-6">
-          <h3 className="text-white font-bold text-xl mb-2">
+        <div className="mt-14 bg-[#082933] rounded-xl py-10 px-6 text-center">
+          <h3 className="text-white font-semibold text-lg mb-2">
             Don&apos;t see your project?
           </h3>
-          <p className="text-white/60 mb-6">
-            We handle all electrical work — call for a free, no-pressure estimate.
+          <p className="text-white/55 text-sm mb-5">
+            We handle all electrical work — call for a free estimate.
           </p>
           <a
             href="tel:7204365746"
-            className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-10 py-4 rounded-full inline-block transition-all duration-200 shadow-xl hover:-translate-y-0.5"
+            className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-bold px-7 py-3 rounded-lg inline-block transition-colors"
           >
-            Call (720) 436-5746
+            (720) 436-5746
           </a>
         </div>
       </div>

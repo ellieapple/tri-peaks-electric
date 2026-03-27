@@ -2,21 +2,21 @@ const testimonials = [
   {
     quote:
       "Quick response, clear pricing, and great work on our panel replacement. We finally feel safe with our electrical setup.",
-    name: "Homeowner",
+    name: "M. Thompson",
     location: "Bailey, CO",
     service: "Panel Replacement",
   },
   {
     quote:
       "Tri Peaks wired our sauna and outdoor circuits exactly the way we needed. Professional from first call to final walkthrough.",
-    name: "Property Owner",
+    name: "K. & R. Dawson",
     location: "Conifer, CO",
     service: "Outdoor Electrical",
   },
   {
     quote:
       "They installed our EV charger fast and explained everything clearly. Scheduling and communication were excellent.",
-    name: "EV Owner",
+    name: "J. Herrera",
     location: "Evergreen, CO",
     service: "EV Charger Installation",
   },
@@ -26,15 +26,12 @@ export default function Testimonials() {
   return (
     <section className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            Customer Feedback
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
-            Trusted Across the 285 Corridor
+        <div className="max-w-2xl mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
+            What customers say
           </h2>
-          <p className="text-[#393939]/70 text-lg max-w-2xl mx-auto">
-            Homeowners and businesses call Tri Peaks when they want code-compliant work, clean communication, and reliable timelines.
+          <p className="text-[#393939]/70 text-base">
+            Real feedback from homeowners across the 285 Corridor.
           </p>
         </div>
 
@@ -42,7 +39,7 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <article
               key={`${item.name}-${item.service}`}
-              className="rounded-2xl border border-gray-200 bg-gray-50 p-7 hover:border-[#eea603] transition-colors"
+              className="rounded-xl border border-gray-200 bg-gray-50 p-6"
             >
               <div className="mb-5 flex items-center gap-1" aria-hidden="true">
                 {Array.from({ length: 5 }).map((_, idx) => (

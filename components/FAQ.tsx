@@ -25,27 +25,21 @@ export default function FAQ() {
   return (
     <section className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
-            FAQs
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#082933] mt-3 mb-3">
-            Common Questions
+        <div className="mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#082933] mb-3">
+            Frequently Asked Questions
           </h2>
-          <p className="text-[#393939]/70 text-lg">
-            Quick answers to the most common service and scheduling questions.
-          </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((item) => (
             <details
               key={item.q}
-              className="group rounded-2xl border border-gray-200 bg-white p-5 open:border-[#eea603]"
+              className="group rounded-xl border border-gray-200 bg-white p-5 open:border-[#082933]"
             >
               <summary className="list-none cursor-pointer flex items-start justify-between gap-4">
                 <span className="text-[#082933] font-bold text-lg">{item.q}</span>
-                <span className="text-[#eea603] font-black text-2xl leading-none group-open:rotate-45 transition-transform">
+                <span className="text-[#393939] font-medium text-xl leading-none group-open:rotate-45 transition-transform">
                   +
                 </span>
               </summary>

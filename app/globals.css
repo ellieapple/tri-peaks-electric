@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tpe-dark: #082933;
+  --tpe-gold: #eea603;
+  --tpe-gray: #b7b6b6;
+  --tpe-charcoal: #393939;
+}
+
+body {
+  background: #082933;
+  color: #ffffff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

@@ -54,11 +54,11 @@ export default function WhyUs() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <Image
-              src="/assets/TPEYetii.png"
+              src="/assets/TPEYeti.png"
               alt="Tri Peaks Electric Yeti mascot"
-              width={320}
-              height={380}
-              className="w-56 sm:w-64 h-auto drop-shadow-2xl"
+              width={420}
+              height={500}
+              className="w-72 sm:w-96 lg:w-full max-w-sm h-auto drop-shadow-2xl"
             />
           </div>
           <div>

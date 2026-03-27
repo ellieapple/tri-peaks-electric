@@ -8,22 +8,16 @@ const services = [
     imageAlt: "Electrician diagnostics — electrical troubleshooting Bailey CO",
   },
   {
-    title: "Panel Upgrades & Replacements",
-    description: "Full panel replacements, 200A service upgrades & subpanel installation.",
-    image: "/assets/Yeti_Electrical_Panel.png",
-    imageAlt: "Panel upgrade electrician — service upgrade Bailey CO",
-  },
-  {
-    title: "EV Charger Installation",
-    description: "Level 2 chargers, 50A 240V outlets — Tesla, Ford, Rivian & all EV brands.",
-    image: "/assets/Yeti_EV_Charger.png",
-    imageAlt: "EV charger installation — electric vehicle charging Colorado",
-  },
-  {
     title: "Lighting Installation",
     description: "Indoor/outdoor, recessed, LED upgrades, security & landscape lighting.",
     image: null,
     imageAlt: "",
+  },
+  {
+    title: "Panel Upgrades & Replacements",
+    description: "Full panel replacements, 200A service upgrades & subpanel installation.",
+    image: "/assets/Yeti_Electrical_Panel.png",
+    imageAlt: "Panel upgrade electrician — service upgrade Bailey CO",
   },
   {
     title: "Backup Power & Generators",
@@ -32,16 +26,16 @@ const services = [
     imageAlt: "",
   },
   {
+    title: "EV Charger Installation",
+    description: "Level 2 chargers, 50A 240V outlets — Tesla, Ford, Rivian & all EV brands.",
+    image: "/assets/Yeti_EV_Charger.png",
+    imageAlt: "EV charger installation — electric vehicle charging Colorado",
+  },
+  {
     title: "Remodels & Additions",
     description: "Basement finishing, kitchen remodels, additions — full wiring rough-in to finish.",
     image: "/assets/Yeti_Electrical_Cord.png",
     imageAlt: "Electrical remodel wiring — home addition electrician Colorado",
-  },
-  {
-    title: "General Installations",
-    description: "Ceiling fans, surge protection, smoke detectors, hot tub wiring & more.",
-    image: null,
-    imageAlt: "",
   },
 ];
 
@@ -66,10 +60,10 @@ export default function Services() {
             <a
               key={service.title}
               href="tel:7204365746"
-              className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#eea603] rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#eea603]/10 flex flex-col"
+              className="group bg-white border border-gray-200 shadow-md hover:border-[#eea603] rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#eea603]/10 flex flex-col"
             >
               {service.image ? (
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-5">
                   <Image
                     src={service.image}
                     alt={service.imageAlt}
@@ -79,8 +73,10 @@ export default function Services() {
                   />
                 </div>
               ) : (
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#082933]/5 group-hover:bg-[#eea603]/10 mb-4 transition-colors">
-                  <svg className="w-8 h-8 text-[#eea603]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                <div className="flex items-center justify-center h-24 mb-5">
+                  <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-[#082933]/5 group-hover:bg-[#eea603]/10 transition-colors">
+                    <svg className="w-10 h-10 text-[#eea603]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                  </div>
                 </div>
               )}
               <h3 className="text-[#082933] font-bold text-lg mb-2 group-hover:text-[#eea603] transition-colors">

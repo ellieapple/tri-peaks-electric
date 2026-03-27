@@ -35,7 +35,7 @@ const specials = [
 
 export default function Specials() {
   return (
-    <section id="pricing" className="py-20 sm:py-28 bg-gray-50">
+    <section id="pricing" className="pt-20 sm:pt-28 pb-10 sm:pb-14 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">

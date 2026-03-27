@@ -2,40 +2,41 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "/assets/Outside Sauna.png",
-    alt: "Outdoor sauna electrical hookup — Tri Peaks Electric Service, Bailey CO",
-    caption: "Outdoor Sauna Electrical Hookup",
+    src: "/assets/Outside_Sauna.png",
+    alt: "Outdoor sauna electrical hookup — Tri Peaks Electric, Bailey CO",
+    title: "Outdoor Sauna Hookup",
     location: "Bailey, CO",
+    tag: "Outdoor",
   },
   {
-    src: "/assets/hexigon office.png",
-    alt: "Commercial office electrical installation — Tri Peaks Electric Service",
-    caption: "Commercial Office Electrical",
+    src: "/assets/hexigon_office.png",
+    alt: "Commercial office electrical — Tri Peaks Electric Service",
+    title: "Commercial Office Electrical",
     location: "Jefferson County, CO",
+    tag: "Commercial",
   },
   {
-    src: "/assets/ChatGPT Image Feb 20, 2026, 12_40_33 PM.png",
-    alt: "Tri Peaks Electric Service job site — licensed electrician Colorado",
-    caption: "Residential Panel Upgrade",
+    src: "/assets/ChatGPT_Image.png",
+    alt: "Residential panel upgrade — licensed electrician Colorado",
+    title: "Residential Panel Upgrade",
     location: "Conifer, CO",
+    tag: "Residential",
   },
 ];
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 bg-[#082933]">
+    <section id="gallery" className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-[#eea603] text-sm font-semibold uppercase tracking-widest">
-            Our Work
+        <div className="text-center mb-16">
+          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
+            Our Portfolio
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mt-2 mb-4">
-            Real Work. Real Results.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
+            Featured Projects
           </h2>
-          <p className="text-[#b7b6b6] text-lg max-w-2xl mx-auto">
-            Every job done right — from mountain cabins to commercial
-            properties. See what Tri Peaks Electric delivers across the 285
-            Corridor.
+          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
+            See the quality electrical work we&apos;ve completed across the 285 Corridor.
           </p>
         </div>
 
@@ -43,38 +44,30 @@ export default function Gallery() {
           {photos.map((photo) => (
             <div
               key={photo.src}
-              className="group relative rounded-2xl overflow-hidden border border-[#eea603]/20 hover:border-[#eea603]/60 transition-all duration-300"
+              className="group relative rounded-2xl overflow-hidden bg-gray-100 shadow-md hover:shadow-2xl transition-all duration-500"
             >
-              <div className="aspect-[4/3] relative bg-[#0a3444]">
+              <div className="aspect-[4/3] relative">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#082933]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                {/* Tag */}
+                <div className="absolute top-4 left-4">
+                  <span className="bg-[#eea603] text-[#082933] text-xs font-extrabold px-3 py-1 rounded-full">
+                    {photo.tag}
+                  </span>
+                </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="text-white font-bold text-base">{photo.caption}</p>
-                <p className="text-[#eea603] text-sm flex items-center gap-1">
-                  📍 {photo.location}
-                </p>
+                <h3 className="text-white font-bold text-lg">{photo.title}</h3>
+                <p className="text-white/70 text-sm">{photo.location}</p>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-10">
-          <p className="text-[#b7b6b6] mb-4">
-            Want to see more? Follow us or call to discuss your project.
-          </p>
-          <a
-            href="tel:7204365746"
-            className="border-2 border-[#eea603] text-[#eea603] hover:bg-[#eea603] hover:text-[#082933] font-bold px-8 py-3 rounded-xl inline-block transition-all duration-200"
-          >
-            📞 (720) 436-5746
-          </a>
         </div>
       </div>
     </section>

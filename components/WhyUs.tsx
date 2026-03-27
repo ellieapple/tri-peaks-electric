@@ -2,86 +2,90 @@ import Image from "next/image";
 
 const trustPoints = [
   {
-    title: "Licensed & Insured in Colorado",
-    description:
-      "Fully licensed electrical contractor. All work performed to code with proper permitting when required.",
+    icon: "🏔️",
+    title: "Local Bailey Experts",
+    description: "Born & raised in Colorado. We understand mountain properties, weather, and local codes.",
   },
   {
-    title: "Ranked #1 Electrician in Bailey",
-    description:
-      "Top-ranked on Google for Bailey, CO. Trusted by homeowners and businesses across Park & Jefferson County.",
+    icon: "⚡",
+    title: "Ranked #1 in Bailey",
+    description: "Top-ranked on Google. Trusted by homeowners & businesses across Park & Jefferson County.",
   },
   {
-    title: "Residential & Commercial",
-    description:
-      "Whether it's a mountain cabin or a commercial office, we handle electrical for all property types.",
+    icon: "🕐",
+    title: "Fast Same-Day Service",
+    description: "Minimal disruption. Most jobs completed same-day or next-day. Emergency service available.",
   },
   {
-    title: "Creative Outdoor & Mountain Solutions",
-    description:
-      "Saunas, hot tubs, outdoor living, generators — we specialize in the unique electrical needs of Colorado mountain properties.",
+    icon: "✅",
+    title: "Satisfaction Guaranteed",
+    description: "We stand behind every project. Licensed, insured, and done right — guaranteed.",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="py-20 bg-[#0a3444]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — trust points */}
-          <div>
-            <span className="text-[#eea603] text-sm font-semibold uppercase tracking-widest">
-              Why Tri Peaks
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-white mt-2 mb-8">
-              Why Choose Tri Peaks Electric?
-            </h2>
+    <section className="py-20 sm:py-28 bg-[#082933] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoLTZ2LTZoNnptMC0zMHY2aC02VjRoNnptMzAgMzB2NmgtNnYtNmg2ek02IDM0djZIMHYtNmg2eiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
 
-            <div className="space-y-6">
-              {trustPoints.map((point) => (
-                <div key={point.title} className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-[#eea603]/20 rounded-lg flex items-center justify-center">
-                      <Image
-                        src="/assets/yellow bolt.PNG"
-                        alt=""
-                        width={20}
-                        height={20}
-                        className="w-5 h-5 object-contain"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-lg mb-1">
-                      {point.title}
-                    </h3>
-                    <p className="text-[#b7b6b6] text-sm leading-relaxed">
-                      {point.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
+            Why Tri Peaks
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
+            Colorado&apos;s Trusted{" "}
+            <span className="text-[#eea603]">Electrical Experts</span>
+          </h2>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {trustPoints.map((point) => (
+            <div
+              key={point.title}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors"
+            >
+              <div className="text-4xl mb-4">{point.icon}</div>
+              <h3 className="text-white font-bold text-lg mb-2">{point.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">{point.description}</p>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Right — Yeti + pull quote */}
-          <div className="flex flex-col items-center text-center">
+        {/* Stats + Yeti */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center">
             <Image
               src="/assets/TPEYetii.png"
-              alt="Tri Peaks Electric Yeti mascot — Bailey CO licensed electrician"
+              alt="Tri Peaks Electric Yeti mascot"
               width={320}
               height={380}
-              className="w-64 sm:w-72 h-auto drop-shadow-2xl mb-8"
+              className="w-56 sm:w-64 h-auto drop-shadow-2xl"
             />
-            <blockquote className="bg-[#082933] border-l-4 border-[#eea603] rounded-xl p-6 text-left w-full max-w-sm">
-              <p className="text-[#eea603] font-extrabold text-xl mb-2">
+          </div>
+          <div>
+            <blockquote className="border-l-4 border-[#eea603] pl-6 mb-8">
+              <p className="text-[#eea603] font-black text-2xl sm:text-3xl mb-3 leading-tight">
                 &ldquo;Powering Projects — Even in Winter&rdquo;
               </p>
-              <footer className="text-[#b7b6b6] text-sm">
+              <footer className="text-white/60 text-sm">
                 — David Martinez, Owner &amp; Master Electrician
               </footer>
             </blockquote>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { n: "#1", l: "Ranked in Bailey" },
+                { n: "10+", l: "Years Experience" },
+                { n: "500+", l: "Jobs Completed" },
+                { n: "100%", l: "Satisfaction Rate" },
+              ].map((s) => (
+                <div key={s.l} className="bg-white/5 rounded-xl p-4 text-center">
+                  <div className="text-[#eea603] font-black text-2xl">{s.n}</div>
+                  <div className="text-white/60 text-xs font-medium">{s.l}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

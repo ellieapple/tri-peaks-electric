@@ -1,88 +1,95 @@
 const specials = [
   {
     title: "30A 240V Inlet",
-    description:
-      "Generator inlet installation — power your home during outages with a 30-amp 240V connection.",
-    pdf: "/assets/Special - 30A 240V Inlet.pdf",
+    description: "Generator inlet for backup power during outages",
+    pdf: "/assets/Special_30A_240V_Inlet.pdf",
     icon: "🔌",
   },
   {
     title: "50A 240V Inlet",
-    description:
-      "Heavy-duty generator inlet for larger homes and equipment. 50-amp 240V installation.",
-    pdf: "/assets/Special - 50A 240V Inlet.pdf",
+    description: "Heavy-duty generator inlet for larger homes",
+    pdf: "/assets/Special_50A_240V_Inlet.pdf",
     icon: "⚡",
   },
   {
     title: "50A 240V EV Charger Outlet",
-    description:
-      "Dedicated EV charging outlet — compatible with all major electric vehicle brands.",
-    pdf: "/assets/Special - 50A 240V EV Charger Outlet.pdf",
+    description: "Dedicated EV charging — all brands compatible",
+    pdf: "/assets/Special_50A_240V_EV_Charger_Outlet.pdf",
     icon: "🚗",
+    popular: true,
   },
   {
     title: "Hot Tub Hookup",
-    description:
-      "Complete hot tub and spa electrical installation including dedicated circuit, GFCI & permits.",
-    pdf: "/assets/Special - Hot Tub.pdf",
+    description: "Complete electrical with dedicated circuit & GFCI",
+    pdf: "/assets/Special_Hot_Tub.pdf",
     icon: "♨️",
   },
   {
     title: "Panel Replacement",
-    description:
-      "Full electrical panel replacement with updated breakers, wiring and code compliance.",
-    pdf: "/assets/Special - Panel Replacement.pdf",
+    description: "Full panel replacement, updated breakers & wiring",
+    pdf: "/assets/Special_Panel_Replacement.pdf",
     icon: "🔧",
+    popular: true,
   },
   {
     title: "Service Upgrade",
-    description:
-      "Upgrade your electrical service to 200A or 400A for modern power demands and EV readiness.",
-    pdf: "/assets/Special - Service Upgrade.pdf",
+    description: "Upgrade to 200A/400A for modern power demands",
+    pdf: "/assets/Special_Service_Upgrade.pdf",
     icon: "⬆️",
   },
 ];
 
 export default function Specials() {
   return (
-    <section id="pricing" className="py-20 bg-[#0a3444]">
+    <section id="pricing" className="py-20 sm:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-[#eea603] text-sm font-semibold uppercase tracking-widest">
+        <div className="text-center mb-16">
+          <span className="text-[#eea603] text-sm font-extrabold uppercase tracking-[0.2em]">
             Transparent Pricing
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mt-2 mb-4">
-            Transparent Pricing Specials
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#082933] mt-3 mb-4">
+            Pricing Specials
           </h2>
-          <p className="text-[#b7b6b6] text-lg max-w-2xl mx-auto">
-            No surprises. Click any card to see our special pricing on the most
-            common electrical projects we do. Know what to expect before you
-            call.
+          <p className="text-[#393939]/70 text-lg max-w-xl mx-auto">
+            No surprises. Click any card to see our fixed pricing on the most
+            popular electrical projects.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {specials.map((special) => (
             <a
               key={special.title}
               href={special.pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#082933] border border-[#eea603]/30 hover:border-[#eea603] rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#eea603]/10"
+              className={`group relative bg-white rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                special.popular
+                  ? "ring-2 ring-[#eea603] shadow-lg"
+                  : "border border-gray-200 hover:border-[#eea603]"
+              }`}
             >
+              {special.popular && (
+                <div className="absolute -top-3 right-4">
+                  <span className="bg-[#eea603] text-[#082933] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#eea603]/15 rounded-xl flex items-center justify-center text-2xl group-hover:bg-[#eea603]/25 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#082933]/5 group-hover:bg-[#eea603]/10 rounded-xl flex items-center justify-center text-2xl transition-colors">
                   {special.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-bold text-lg mb-1">
+                  <h3 className="text-[#082933] font-bold text-lg mb-1 group-hover:text-[#eea603] transition-colors">
                     {special.title}
                   </h3>
-                  <p className="text-[#b7b6b6] text-sm leading-relaxed mb-3">
+                  <p className="text-[#393939]/60 text-sm leading-relaxed mb-3">
                     {special.description}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[#eea603] text-sm font-semibold group-hover:gap-2 transition-all">
-                    Click for details <span>→</span>
+                  <span className="inline-flex items-center gap-1 text-[#eea603] text-sm font-bold group-hover:gap-2 transition-all">
+                    See Pricing <span>→</span>
                   </span>
                 </div>
               </div>
@@ -90,17 +97,16 @@ export default function Specials() {
           ))}
         </div>
 
-        <div className="mt-12 text-center bg-[#082933] border border-[#eea603]/30 rounded-2xl p-8">
+        <div className="mt-14 text-center bg-[#082933] rounded-3xl py-10 px-6">
           <h3 className="text-white font-bold text-xl mb-2">
             Don&apos;t see your project?
           </h3>
-          <p className="text-[#b7b6b6] mb-6">
-            We handle all electrical work. Call for a free estimate — no
-            commitment, no pressure.
+          <p className="text-white/60 mb-6">
+            We handle all electrical work — call for a free, no-pressure estimate.
           </p>
           <a
             href="tel:7204365746"
-            className="bg-[#eea603] hover:bg-yellow-400 text-[#082933] font-bold text-lg px-10 py-4 rounded-xl inline-block transition-all duration-200 shadow-xl hover:-translate-y-0.5"
+            className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-10 py-4 rounded-full inline-block transition-all duration-200 shadow-xl hover:-translate-y-0.5"
           >
             📞 Call (720) 436-5746
           </a>

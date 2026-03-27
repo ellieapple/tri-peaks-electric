@@ -9,8 +9,8 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -23,80 +23,113 @@ export default function Nav() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#082933]/98 shadow-xl" : "bg-[#082933]"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <Image
-              src="/assets/TPEYeti.png"
-              alt="Tri Peaks Electric Service — Bailey CO Electrician"
-              width={48}
-              height={48}
-              className="h-12 w-auto"
-              priority
-            />
-            <span className="hidden sm:block text-[#b7b6b6] font-bold text-sm leading-tight">
-              TRI PEAKS<br />
-              <span className="text-[#eea603]">ELECTRIC SERVICE</span>
-            </span>
-          </Link>
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
+            : "bg-[#082933]"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
+              <Image
+                src="/assets/TPEYeti.png"
+                alt="Tri Peaks Electric Service — Bailey CO Electrician"
+                width={44}
+                height={44}
+                className="h-10 lg:h-11 w-auto"
+                priority
+              />
+              <div className="hidden sm:flex flex-col leading-none">
+                <span className={`font-extrabold text-xs tracking-wider ${scrolled ? "text-[#082933]" : "text-white"}`}>
+                  TRI PEAKS
+                </span>
+                <span className="text-[#eea603] font-bold text-[10px] tracking-widest">
+                  ELECTRIC SERVICE
+                </span>
+              </div>
+            </Link>
 
-          {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Desktop nav links */}
+            <div className="hidden lg:flex items-center gap-7">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-semibold transition-colors hover:text-[#eea603] ${
+                    scrolled ? "text-[#393939]" : "text-white/90"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            {/* CTA + hamburger */}
+            <div className="flex items-center gap-3">
               <a
-                key={link.href}
-                href={link.href}
-                className="text-[#b7b6b6] hover:text-[#eea603] transition-colors font-medium text-sm tracking-wide"
+                href="tel:7204365746"
+                className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold px-4 py-2.5 lg:px-6 lg:py-3 rounded-full text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap animate-pulse-gold"
               >
-                {link.label}
+                <span className="hidden sm:inline">📞 (720) 436-5746</span>
+                <span className="sm:hidden">📞 Call Now</span>
               </a>
-            ))}
-          </div>
-
-          {/* CTA button — always visible */}
-          <div className="flex items-center gap-3">
-            <a
-              href="tel:7204365746"
-              className="bg-[#eea603] hover:bg-yellow-400 text-[#082933] font-bold px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-base transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap"
-            >
-              📞 <span className="hidden sm:inline">Call </span>(720) 436-5746
-            </a>
-
-            {/* Hamburger */}
-            <button
-              className="lg:hidden text-white p-2"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              <span className="block w-6 h-0.5 bg-white mb-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white mb-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white"></span>
-            </button>
+              <button
+                className="lg:hidden p-2"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+              >
+                {menuOpen ? (
+                  <svg className={`w-6 h-6 ${scrolled ? "text-[#082933]" : "text-white"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                ) : (
+                  <svg className={`w-6 h-6 ${scrolled ? "text-[#082933]" : "text-white"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="lg:hidden bg-[#0a3444] border-t border-[#eea603]/30 py-4">
+        {/* Mobile dropdown */}
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+            menuOpen ? "max-h-80" : "max-h-0"
+          }`}
+        >
+          <div className={`px-4 py-3 space-y-1 ${scrolled ? "bg-white" : "bg-[#082933]"} border-t ${scrolled ? "border-gray-200" : "border-white/10"}`}>
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-3 text-[#b7b6b6] hover:text-[#eea603] hover:bg-[#082933] transition-colors font-medium"
+                className={`block py-3 font-semibold text-sm transition-colors ${
+                  scrolled ? "text-[#393939] hover:text-[#eea603]" : "text-white/80 hover:text-[#eea603]"
+                }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
           </div>
-        )}
+        </div>
+      </nav>
+
+      {/* Mobile sticky bottom CTA bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#082933] border-t border-[#eea603]/30 p-3 flex gap-2">
+        <a
+          href="tel:7204365746"
+          className="flex-1 bg-[#eea603] text-[#082933] font-extrabold text-center py-3 rounded-lg text-sm"
+        >
+          📞 Call (720) 436-5746
+        </a>
+        <a
+          href="#contact"
+          className="flex-1 border-2 border-[#eea603] text-[#eea603] font-bold text-center py-3 rounded-lg text-sm"
+        >
+          Free Estimate
+        </a>
       </div>
-    </nav>
+    </>
   );
 }

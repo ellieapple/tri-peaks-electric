@@ -1,7 +1,3 @@
-"use client";
-
-import { useState, useEffect } from "react";
-
 const offers = [
   {
     title: "Veterans & Military",
@@ -38,40 +34,6 @@ const offers = [
   },
 ];
 
-function Countdown() {
-  const [time, setTime] = useState({ days: 7, hours: 12, mins: 30, secs: 0 });
-
-  useEffect(() => {
-    const end = Date.now() + 7 * 86400000 + 12 * 3600000 + 30 * 60000;
-    const tick = () => {
-      const diff = Math.max(0, end - Date.now());
-      setTime({
-        days: Math.floor(diff / 86400000),
-        hours: Math.floor((diff % 86400000) / 3600000),
-        mins: Math.floor((diff % 3600000) / 60000),
-        secs: Math.floor((diff % 60000) / 1000),
-      });
-    };
-    const id = setInterval(tick, 1000);
-    tick();
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <div className="flex items-center gap-3 justify-center">
-      <span className="text-white/70 text-sm font-medium">Offer Ends In:</span>
-      {Object.entries(time).map(([k, v]) => (
-        <div key={k} className="text-center">
-          <span className="bg-white/10 text-white font-mono font-bold text-lg px-2.5 py-1 rounded">
-            {String(v).padStart(2, "0")}
-          </span>
-          <span className="block text-white/50 text-[10px] uppercase mt-0.5">{k}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function Offers() {
   return (
     <section id="offers" className="py-20 sm:py-28 bg-[#082933] relative overflow-hidden">
@@ -79,11 +41,7 @@ export default function Offers() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#eea603]/5 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Urgency header */}
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-2 bg-red-600 text-white rounded-full px-4 py-1.5 mb-5 text-xs font-extrabold uppercase tracking-wider animate-pulse">
-            LIMITED TIME - SAVE BIG
-          </div>
+        <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3">
             Special Offers for{" "}
             <span className="text-[#eea603]">Our Community</span>
@@ -91,10 +49,9 @@ export default function Offers() {
           <p className="text-white/60 text-lg mb-6">
             Click any offer to claim — mention at time of service
           </p>
-          <Countdown />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {offers.map((offer) => (
             <a
               key={offer.title}

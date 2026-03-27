@@ -75,6 +75,37 @@ const jsonLd = {
       name: "Tri Peaks Electric Service Inc.",
       publisher: { "@id": "https://tpeservice.net/#business" },
     },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tpeservice.net/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How quickly can Tri Peaks respond to service calls?",
+          acceptedAnswer: { "@type": "Answer", text: "Most requests in Bailey, Conifer, and Evergreen can be scheduled quickly, and same-day service is available for many jobs." },
+        },
+        {
+          "@type": "Question",
+          name: "Do you handle permits and code-compliant installations?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes. Tri Peaks performs licensed, code-compliant work and handles permitting when required for your project." },
+        },
+        {
+          "@type": "Question",
+          name: "Can you install EV chargers and panel upgrades together?",
+          acceptedAnswer: { "@type": "Answer", text: "Absolutely. We evaluate your existing service, recommend upgrades if needed, and install a dedicated EV charging circuit." },
+        },
+        {
+          "@type": "Question",
+          name: "Do you provide upfront pricing and free estimates?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes. You can review posted specials and request a free estimate for custom projects before scheduling work." },
+        },
+        {
+          "@type": "Question",
+          name: "What areas do you serve?",
+          acceptedAnswer: { "@type": "Answer", text: "Tri Peaks serves Bailey, Conifer, Evergreen, Indian Hills, Pine, Morrison, Fairplay, Jefferson County, Park County, and West Metro Denver." },
+        },
+      ],
+    },
   ],
 };
 

@@ -2,20 +2,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/assets/ChatGPT_Image.png"
-          alt="Tri Peaks Electric Service — professional electrical work in Bailey, Colorado"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-[#082933]/75" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#082933]/95 via-[#082933]/70 to-transparent" />
-      </div>
+    <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-[#082933]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a3444] via-[#082933] to-[#051e26]" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#eea603]/5 to-transparent pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -23,7 +12,7 @@ export default function Hero() {
           <div>
             {/* Trust badge */}
             <div className="inline-flex items-center gap-2 bg-[#eea603] text-[#082933] rounded-full px-4 py-1.5 mb-6 text-sm font-extrabold shadow-lg">
-              ✓ Trusted by Bailey, Conifer & Evergreen Homeowners
+              Trusted by Bailey, Conifer & Evergreen Homeowners
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
@@ -47,7 +36,7 @@ export default function Hero() {
                 href="tel:7204365746"
                 className="border-2 border-white/40 hover:border-[#eea603] text-white hover:text-[#eea603] font-bold text-lg px-8 py-4 rounded-full text-center transition-all duration-200"
               >
-                📞 (720) 436-5746
+                (720) 436-5746
               </a>
             </div>
 

@@ -25,7 +25,7 @@ export default function ServiceArea() {
               key={area}
               className="bg-white border border-gray-200 hover:border-[#eea603] text-[#082933] text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-sm hover:shadow-md"
             >
-              📍 {area}
+              {area}
             </span>
           ))}
         </div>
@@ -35,7 +35,7 @@ export default function ServiceArea() {
             href="tel:7204365746"
             className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-8 py-4 rounded-full inline-block transition-all duration-200 shadow-lg hover:-translate-y-0.5"
           >
-            📞 Call Your Local Electrician
+            Call Your Local Electrician
           </a>
         </div>
       </div>

@@ -19,13 +19,13 @@ export default function CTA() {
             href="tel:7204365746"
             className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-10 py-5 rounded-full transition-all duration-200 shadow-lg shadow-[#eea603]/20 hover:-translate-y-0.5"
           >
-            📞 (720) 436-5746
+            (720) 436-5746
           </a>
           <a
             href="mailto:David@TPEService.net"
             className="border-2 border-white/30 text-white hover:border-[#eea603] hover:text-[#eea603] font-bold text-lg px-10 py-5 rounded-full transition-all duration-200 hover:-translate-y-0.5"
           >
-            ✉️ Email for Free Estimate
+            Email for Free Estimate
           </a>
         </div>
 

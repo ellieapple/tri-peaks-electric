@@ -78,8 +78,8 @@ export default function Specials() {
               )}
 
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#082933]/5 group-hover:bg-[#eea603]/10 rounded-xl flex items-center justify-center text-2xl transition-colors">
-                  {special.icon}
+                <div className="flex-shrink-0 w-12 h-12 bg-[#082933]/5 group-hover:bg-[#eea603]/10 rounded-xl flex items-center justify-center transition-colors">
+                  <svg className="w-6 h-6 text-[#eea603]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-[#082933] font-bold text-lg mb-1 group-hover:text-[#eea603] transition-colors">
@@ -108,7 +108,7 @@ export default function Specials() {
             href="tel:7204365746"
             className="bg-[#eea603] hover:bg-[#d99400] text-[#082933] font-extrabold text-lg px-10 py-4 rounded-full inline-block transition-all duration-200 shadow-xl hover:-translate-y-0.5"
           >
-            📞 Call (720) 436-5746
+            Call (720) 436-5746
           </a>
         </div>
       </div>

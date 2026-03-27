@@ -45,7 +45,9 @@ export default function WhyUs() {
               key={point.title}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors"
             >
-              <div className="text-4xl mb-4">{point.icon}</div>
+              <div className="flex justify-center mb-4">
+                <svg className="w-8 h-8 text-[#eea603]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+              </div>
               <h3 className="text-white font-bold text-lg mb-2">{point.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed">{point.description}</p>
             </div>

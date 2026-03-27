@@ -82,7 +82,7 @@ export default function Offers() {
         {/* Urgency header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-red-600 text-white rounded-full px-4 py-1.5 mb-5 text-xs font-extrabold uppercase tracking-wider animate-pulse">
-            🔥 LIMITED TIME — SAVE BIG
+            LIMITED TIME - SAVE BIG
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3">
             Special Offers for{" "}

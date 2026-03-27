@@ -3,39 +3,33 @@ const specials = [
     title: "30A 240V Inlet",
     description: "Generator inlet for backup power during outages",
     pdf: "/assets/Special_30A_240V_Inlet.pdf",
-    icon: "🔌",
   },
   {
     title: "50A 240V Inlet",
     description: "Heavy-duty generator inlet for larger homes",
     pdf: "/assets/Special_50A_240V_Inlet.pdf",
-    icon: "⚡",
   },
   {
     title: "50A 240V EV Charger Outlet",
     description: "Dedicated EV charging — all brands compatible",
     pdf: "/assets/Special_50A_240V_EV_Charger_Outlet.pdf",
-    icon: "🚗",
     popular: true,
   },
   {
     title: "Hot Tub Hookup",
     description: "Complete electrical with dedicated circuit & GFCI",
     pdf: "/assets/Special_Hot_Tub.pdf",
-    icon: "♨️",
   },
   {
     title: "Panel Replacement",
     description: "Full panel replacement, updated breakers & wiring",
     pdf: "/assets/Special_Panel_Replacement.pdf",
-    icon: "🔧",
     popular: true,
   },
   {
     title: "Service Upgrade",
     description: "Upgrade to 200A/400A for modern power demands",
     pdf: "/assets/Special_Service_Upgrade.pdf",
-    icon: "⬆️",
   },
 ];
 

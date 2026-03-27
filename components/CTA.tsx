@@ -32,7 +32,7 @@ export default function CTA() {
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-white/60 text-sm font-medium">
           {["Free Estimates", "Licensed & Insured", "Same-Day Available", "No Surprise Pricing"].map((t) => (
             <span key={t} className="flex items-center gap-1.5">
-              <span className="text-[#eea603]">✓</span> {t}
+              <span className="text-[#eea603]">•</span> {t}
             </span>
           ))}
         </div>

@@ -24,14 +24,12 @@ const services = [
     description: "Indoor/outdoor, recessed, LED upgrades, security & landscape lighting.",
     image: null,
     imageAlt: "",
-    icon: "💡",
   },
   {
     title: "Backup Power & Generators",
     description: "Standby/portable generators, transfer switches, whole-home backup power.",
     image: null,
     imageAlt: "",
-    icon: "🔋",
   },
   {
     title: "Remodels & Additions",
@@ -44,7 +42,6 @@ const services = [
     description: "Ceiling fans, surge protection, smoke detectors, hot tub wiring & more.",
     image: null,
     imageAlt: "",
-    icon: "🛠️",
   },
 ];
 

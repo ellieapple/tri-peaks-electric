@@ -2,22 +2,18 @@ import Image from "next/image";
 
 const trustPoints = [
   {
-    icon: "🏔️",
     title: "Local Bailey Experts",
     description: "Born & raised in Colorado. We understand mountain properties, weather, and local codes.",
   },
   {
-    icon: "⚡",
     title: "Ranked #1 in Bailey",
     description: "Top-ranked on Google. Trusted by homeowners & businesses across Park & Jefferson County.",
   },
   {
-    icon: "🕐",
     title: "Fast Same-Day Service",
     description: "Minimal disruption. Most jobs completed same-day or next-day. Emergency service available.",
   },
   {
-    icon: "✅",
     title: "Satisfaction Guaranteed",
     description: "We stand behind every project. Licensed, insured, and done right — guaranteed.",
   },
